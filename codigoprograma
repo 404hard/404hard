@@ -1,0 +1,51 @@
+#include <iostream>
+#include <conio.h>
+using namespace std;
+
+int main()
+{
+
+mediaquarto(float sm);
+		
+	return 0;
+}
+
+float mediaquarto(float sm)
+{
+	cout<<"CALCULADORA NOTAS 4 B"<<endl;
+	int x=1;
+	while(x=1)
+	{
+		cout<<"digite o nome da materia"<<endl;
+		char materia[50];
+		cin>>materia;
+		
+		float media[3];
+		int cont=0;
+		for(cont=1;cont<=3;cont++)
+		{
+			cout<<"digite a media do bimestre "<<cont<<endl;
+			cin>>media[cont];
+		}
+		media[1]=media[1]*2;
+		media[2]=media[2]*2;
+		media[3]=media[3]*3;
+		float sm=0;
+		sm=(media[1]+media[2]+media[3]-60)*-1;
+		float resultado=0;
+		resultado=sm/3;
+		
+		cout<<"voce precisa de "<<resultado<<" pontos no 4B para passar de ano em "<<materia<<endl;
+		
+		cout<<"--------------------------------------------------------------------------------"<<endl;
+		
+		cout<<"para calcular outra materia digite '1' "<<endl;
+		x=getch();
+		if (x!=1)
+		{
+			break;
+		}
+	} 
+	system("pause");
+	return (sm);		
+}
